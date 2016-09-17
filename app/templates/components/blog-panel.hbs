@@ -1,0 +1,18 @@
+<div class="panel panel-default blog-list" {{action 'navigate' data}}>
+  <div class="panel-body">
+    <h2 class="blog-list-header">{{data.header}}</h2>
+    <hr>
+    <p class="blog-list-summary">
+      {{data.summary}}
+    </p>
+    <div class="blog-list-footer">
+      <span>Tags: </span>
+      {{#each tagged as |tag|}}
+        <span class="tags">{{tag}}</span>
+      {{/each}}
+      <span class="blog-list-date text-right">
+        <span>Date: </span>{{timestamp}}
+      </span>
+    </div>
+  </div>
+</div>

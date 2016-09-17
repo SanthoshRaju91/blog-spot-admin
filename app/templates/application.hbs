@@ -1,3 +1,45 @@
-<h2 id="title">Welcome to Ember</h2>
+{{#if session.isAuthenticated}}
+  {{!-- Header nav bar section--}}
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="images/user.png" width="50" height="50">
+          </a>
+        </div>
 
-{{outlet}}
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            {{#each model as |data|}}
+              <li>
+                {{#link-to data.url}}
+                  {{data.name }}
+                {{/link-to}}
+              </li>
+            {{/each}}
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <div class="form-group">
+                <button class="btn btn-default" {{action 'signOut'}}>Sign Out</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  {{!-- Main outlet section --}}
+  <div class="container-fluid content">
+    {{outlet}}
+  </div>
+{{else}}
+  <div class="container log-in">
+    <div class="jumbotron text-center">
+      <h3>Please sign in with your goggle account to access admin panel.</h3>
+      <button class="btn btn-success" {{action 'signIn'}}>Sign In with Goggle</button>
+    </div>
+  </div>
+{{/if}}

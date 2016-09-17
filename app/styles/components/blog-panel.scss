@@ -1,0 +1,49 @@
+.blog-list {
+  border-top: 4px solid $flamingo-red;
+  color: $primary-color-7;
+  cursor: pointer;
+  hr {
+    margin: 0;
+    color: $background-color-2;
+    background-color: $background-color-2;
+    opacity: 0.8;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: $medium;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: $extra-small;
+    letter-spacing: 1px;
+  }
+  .blog-list-footer {
+    margin-top: 20px;
+    span {
+      font-weight: $normal;
+      font-size: $small;
+      letter-spacing: 1px;
+    }
+    .tags {
+      padding: 5px 10px;
+      font-weight: $light;
+      background-color: $cinnabar-red;
+      color: $primary-color-6;
+      font-size: $extra-small !important;
+      letter-spacing: .5px;
+      border-radius: 2px;
+      margin-right: 5px;
+    }
+    .blog-list-date {
+      letter-spacing: 1px;
+      font-weight: $normal;
+      font-size: $small;
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="panel panel-default video-panel">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-5 col-sm-5 video-section">
+        <iframe frameborder="0" height="200" width="240" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" src="{{data.url}}"></iframe>
+      </div>
+      <div class="col-md-6 col-sm-6 video-summary">
+        <h4>{{data.header}}</h4>
+        <hr>
+        <p>{{data.summary}}</p>
+      </div>
+      <div class="col-md-1 col-sm-1 video-actions">
+        <button class="btn btn-danger btn-sm" {{action "deleteVideo" data}}>
+          {{fa-icon "fa-trash"}}
+        </button>
+        <button class="btn btn-primary btn-sm btn-edit" {{action "editVideo" data}}>
+          {{fa-icon "fa-pencil"}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

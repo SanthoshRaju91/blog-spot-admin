@@ -1,0 +1,60 @@
+<section class="add">
+  <h2>Write a Blog</h2>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="form-horizontal">
+        <div class="form-group">
+          <div class="col-sm-8">
+            {{input type="text" value=header class="form-control" placeholder="Enter Header"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            {{input type="text" value=summary class="form-control" placeholder="Enter Summary"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            <select class="form-control" onchange={{action 'selectedTag' value='target.value'}}>
+              <option value="-1">Select</option>
+              {{#each model as |data|}}
+                <option value="{{data.label}}">{{data.name}}</option>
+              {{/each}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            {{textarea value=bodyContent class="form-control" rows="20" cols="20" placeholder="Enter Content"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-8">
+            <button class="btn btn-primary" {{action 'submitBlog'}}>Submit</button>
+            <input type="reset" class="btn btn-danger" value="Clear Form"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8 mark-down-content">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3>{{header}}</h3>
+          <hr/>
+
+          <h4>Description</h4>
+          <hr/>
+
+          <p class="content-summary">
+            {{summary}}
+          </p>
+
+          <div class="content">
+            {{markdown-to-html bodyContent}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

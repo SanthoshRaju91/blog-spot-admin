@@ -1,0 +1,26 @@
+<section class="blog-lists">
+  <div class="row header">
+    <div class="col-sm-6">
+      <h2>List of blogs</h2>
+    </div>
+    <div class="col-sm-6">
+      {{#link-to 'blog.add' class="btn btn-success"}}
+        Write a Blog
+        {{/link-to}}
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    {{#if model}}
+      {{#each model as |data|}}
+        <div class="col-sm-4">
+          {{blog-panel data=data}}
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="no-data text-center">
+        <h2>No Cool Blogs for now.</h2>
+      </div>
+    {{/if}}
+  </div>
+</section>

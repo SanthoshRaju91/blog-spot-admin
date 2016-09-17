@@ -1,0 +1,30 @@
+.video-panel {
+  .panel-body {
+    .video-section {
+      iframe {
+        border: 0px;
+      }
+    }
+
+    .video-summary {
+      h4 {
+        font-size: $medium;
+        font-weight: $light;
+        letter-spacing: 1px;
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-size: $small;
+        font-weight: $light !important;
+        letter-spacing: 1px;
+      }
+    }
+
+    .video-actions {
+      .btn-edit {
+        margin-top: 10px;
+      }
+    }
+  }
+}

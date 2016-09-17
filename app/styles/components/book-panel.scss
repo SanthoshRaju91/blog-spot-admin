@@ -1,0 +1,30 @@
+.book-panel {
+  .panel-body {
+    .img-section {
+      border-right: 0.5px solid $background-color-2;
+    }
+    .description {
+
+      h4 {
+        font-size: $medium;
+        font-weight: $light;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: $small;
+        font-weight: $light !important;
+        letter-spacing: 1px;
+      }
+
+      .author-section {
+        font-size: $medium;
+        font-weight: $light;
+
+        span {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
